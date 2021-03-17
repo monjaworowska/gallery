@@ -7,7 +7,11 @@ const Nav = () => {
   return (
     <nav className="navbar is-light mb-3">
       <div className="navbar-brand">
-        <MenuItem url="/" text="Gallery" size="is-size-2-desktop"></MenuItem>
+        <MenuItem
+          url="/gallery"
+          text="Gallery"
+          size="is-size-2-desktop"
+        ></MenuItem>
         <div
           className={cx("navbar-burger", isActive ? "is-active" : null)}
           onClick={() => toggleIsActive(!isActive)}

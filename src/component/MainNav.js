@@ -4,7 +4,7 @@ const MainNav = () => {
   return (
     <nav className="navbar is-light">
       <div className="navbar-brand">
-        <MenuItem url="/gallery" text="Gallery" size="is-size-2-desktop" />
+        <MenuItem url="/gallery" text="Gallery" size="is-size-2" />
       </div>
     </nav>
   );
