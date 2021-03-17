@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, NavLink } from "react-router-dom";
 
 import MainNav from "./component/MainNav";
-import PhotoTemplate from "./component/PhotoTemplate";
+import List from "./component/List";
 
 const photo = {
   albumId: 1,
@@ -45,7 +45,6 @@ const App = () => (
   <BrowserRouter>
     <MainNav />
     <div className="container mt-2">
-      <PhotoTemplate photo={photo} user={user} album={album} />
       <div className="tile is-ancestor">
         <div className="tile is-3 is-vertical is-parent">
           <NavLink to="/users" className="tile is-child box">
@@ -66,6 +65,7 @@ const App = () => (
         <div className="tile is-parent">
           <div className="tile is-child box">
             <p className="title">Random Album</p>
+            <List url="http://jsonplaceholder.typicode.com/albums/1/photos" />
             <button className="button is-light">More...</button>
           </div>
         </div>
