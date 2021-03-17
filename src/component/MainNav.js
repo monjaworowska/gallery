@@ -1,15 +1,10 @@
-import { NavLink } from "react-router-dom";
+import MenuItem from "./MenuItem";
 
 const MainNav = () => {
   return (
-    <nav className="navbar is-info">
+    <nav className="navbar is-light">
       <div className="navbar-brand">
-        <NavLink
-          className="navbar-item is-uppercase has-text-weight-bold is-size-2-desktop"
-          to="/"
-        >
-          Gallery
-        </NavLink>
+        <MenuItem url="/gallery" text="Gallery" size="is-size-2-desktop" />
       </div>
     </nav>
   );
