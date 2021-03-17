@@ -1,5 +1,5 @@
 const PhotoTemplate = (props) => {
-  const { photo, user, album } = props;
+  const { photo, user = null, album = null } = props;
   return (
     <>
       <div className="card">
@@ -10,8 +10,8 @@ const PhotoTemplate = (props) => {
         </div>
         <div className="card-footer">
           <p className="card-footer-item">
-            {photo.title.slice(0, 1).toUpperCase()}
-            {photo.title.slice(1, photo.title.length)}
+            {photo.title ? photo.title.slice(0, 1).toUpperCase() : null}
+            {photo.title ? photo.title.slice(1, photo.title.length) : null}
           </p>
         </div>
       </div>

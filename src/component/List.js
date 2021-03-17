@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import PhotoTemplate from "./PhotoTemplate";
+import Photo from "./Photo";
 
 class List extends React.Component {
   state = {
@@ -18,7 +18,7 @@ class List extends React.Component {
     );
   }
   render() {
-    const { site, sites } = this.state;
+    const { site, sites, type } = this.state;
     const data = this.state.data.slice(site * 10, site * 10 + 10);
     return (
       <>
@@ -40,11 +40,9 @@ class List extends React.Component {
             ))}
         </div>
         <div className="columns is-multiline mt-1">
-          {data.map((photo) => (
-            <div className="column is-one-third">
-              <PhotoTemplate photo={photo} />
-            </div>
-          ))}
+          {type === "photos"
+            ? data.map((photo) => <Photo id={photo.id} key={photo.id} />)
+            : null}
         </div>
       </>
     );
